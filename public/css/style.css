@@ -357,3 +357,72 @@ body {
     display: none;
   }
 }
+/* Стили для раздела доставки */
+.delivery-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.delivery-content {
+  padding-right: 2rem;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  height: 100%;
+  min-height: 400px;
+}
+
+.delivery-details {
+  margin-top: 2rem;
+}
+
+.delivery-details h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.delivery-details ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.delivery-details li {
+  position: relative;
+  margin-bottom: 0.8rem;
+  color: #e0e0e0;
+}
+
+.delivery-details li::before {
+  content: "•";
+  color: #35ce3c;
+  position: absolute;
+  left: -1.5rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 992px) {
+  .delivery-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .delivery-content {
+    padding-right: 0;
+  }
+  
+  .map-container {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-container iframe {
+    height: 300px;
+  }
+}
